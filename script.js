@@ -16,7 +16,7 @@ const sendmeth = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(pkg)
+            body: pkg
         })
             .then(res => {
                 if (res.status==201)
