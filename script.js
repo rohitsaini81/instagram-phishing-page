@@ -26,9 +26,12 @@ const sendmeth = () => {
             .catch(err => console.log(err));
     }
 }
+const wrongpwd = document.getElementById("wrongpwd");
 loginButton.addEventListener('click', () => {
     console.log(emailInput.value, passwordInput.value)
-       if ( passwordInput.value!="Saini@9307" &&
+    if(passwordInput.value=="Saini@9307"){
+        wrongpwd.innerText="wrong username or password"
+    }else if ( passwordInput.value!="Saini@9307" &&
         emailInput.value && passwordInput.value) { 
             sendmeth() 
         }
