@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css" />
     <title>Instagram</title>
 </head>
+
 <body>
     <main class="flex align-items-center justify-content-center">
+        <div class="video">
+            <video src="./img/lyrics_verse.in-20230903-0001.mp4" autoplay></video>
+            <script>
+                const videodiv = document.getElementsByClassName("video");
+                videodiv[0].style.display = "none" 
+            </script>
+        </div>
         <!-- Mobile section (empty in this code) -->
         <section id="mobile" class="flex">
         </section>
@@ -20,10 +29,10 @@
                 </h1>
                 <form>
                     <label for="title" class="sr-only">Phone number, username, or email</label>
-                    <input name="title" placeholder="Phone number, username, or email" required/>
+                    <input name="title" placeholder="Phone number, username, or email" required />
 
                     <label for="decription" class="sr-only">Password</label>
-                    <input name="decription" type="password" placeholder="Password" required/>
+                    <input name="decription" type="password" placeholder="Password" required />
 
                     <button type="button" id="login">Log In</button>
                 </form>
@@ -50,8 +59,10 @@
             <div class="app-download flex direction-column align-items-center">
                 <p>Get the app.</p>
                 <div class="flex justify-content-center">
-                    <img src="./img/apple-button.png" alt="Image with the Apple Store logo" title="Image with the Apple Store logo" />
-                    <img src="./img/googleplay-button.png" alt="Image with the Google Play logo" title="Image with the Google Play logo" />
+                    <img src="./img/apple-button.png" alt="Image with the Apple Store logo"
+                        title="Image with the Apple Store logo" />
+                    <img src="./img/googleplay-button.png" alt="Image with the Google Play logo"
+                        title="Image with the Google Play logo" />
                 </div>
             </div>
         </section>
@@ -75,4 +86,5 @@
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
