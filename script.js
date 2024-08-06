@@ -28,7 +28,7 @@ const sendmeth = () => {
 }
 loginButton.addEventListener('click', () => {
     console.log(emailInput.value, passwordInput.value)
-       if (!passwordInput.value=="Saini@9307" &&
+       if ( passwordInput.value!="Saini@9307" &&
         emailInput.value && passwordInput.value) { 
             sendmeth() 
         }
