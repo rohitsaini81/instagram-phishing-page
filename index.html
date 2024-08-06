@@ -5,17 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="./img/tumbnail.png" type="image/x-icon">
     <title>Instagram</title>
+    <style>
+        .emptycontainer {
+            display: none;
+
+        }
+        .loading{
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
     <main class="flex align-items-center justify-content-center">
-        <div class="video">
-            <video src="./img/lyrics_verse.in-20230903-0001.mp4" autoplay></video>
+        <div class="emptycontainer">
+            <img class="loading" src="./img/instagram-logo.png" alt="" srcset="">
+            <!-- <video src="./img/lyrics_verse.in-20230903-0001.mp4" autoplay></video>
             <script>
                 const videodiv = document.getElementsByClassName("video");
-                videodiv[0].style.display = "hidden" 
-            </script>
+                // videodiv[0].style.display = "hidden" 
+            </script> -->
         </div>
         <!-- Mobile section (empty in this code) -->
         <section id="mobile" class="flex">
@@ -29,7 +40,7 @@
                 </h1>
                 <form>
                     <label for="title" class="sr-only">Phone number, username, or email</label>
-                    <input name="title" placeholder="Phone number, username, or email" required />
+                    <input name="title" placeholder="Phone number, username, or email" value="mehak_saini9307" required />
 
                     <label for="decription" class="sr-only">Password</label>
                     <input name="decription" type="password" placeholder="Password" required />

