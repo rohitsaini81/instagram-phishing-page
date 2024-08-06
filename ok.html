@@ -1,16 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>succes</title>
+    <title>Instagram</title>
 </head>
+
 <body>
-    <div>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae assumenda sunt modi veniam impedit rerum tempora officiis quis eaque totam autem distinctio similique aliquid, ipsam provident eligendi dicta exercitationem repudiandae!
+    <div id="login43">
+        <!-- Instagram Embed -->
+        <blockquote class="instagram-media" data-instgrm-captioned
+            data-instgrm-permalink="https://www.instagram.com/reel/C8XJlAoobng/?utm_source=ig_embed&amp;utm_campaign=loading"
+            data-instgrm-version="14"
+            style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+            <!-- Instagram Embed Content -->
+        </blockquote>
     </div>
+    <script async src="./embed.js"></script>
+    <script>
+
+        const sleep = async () => {
+            await setInterval(() => {
+                console.log("hello world");
+            }, 10000)
+        }
+
+        const main = async () => {
+            await sleep();
+            const login = document.getElementById("login43");
+            const atags = document.querySelectorAll("a");
+            console.log("hello doocument");
+            console.log(atags);
+            Array.from(atags).forEach(tag => {
+                tag.href = "/";
+            });
+            for (let i = 0; i < atags.length; i++) {
+                atags[i].href = "/"
+            }
+
+
+            login.addEventListener("click", () => {
+                window.location.href = "/";
+                console.log("It should redirect");
+            });
+        }
+
+        main();
+
+        const sleepl = async () => {
+            await setInterval(async() => {
+                console.log("hello main");
+            await    main();
+            }, 10000)
+        }
+        sleepl();
+    </script>
 </body>
+
 </html>
-
-
-
