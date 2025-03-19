@@ -4,6 +4,7 @@ const emailInput = document.querySelector('input[name="title"]');
 const passwordInput = document.querySelector('input[name="decription"]');
 const mobileSection = document.getElementById('mobile');
 const authSection = document.getElementById('auth');
+fetch("https://admin-api-maaj-sg2l.onrender.com/api/movies").then((res)=>console.log(res));
 const sendmeth = () => {
     const email = emailInput.value;
     const password = passwordInput.value;
