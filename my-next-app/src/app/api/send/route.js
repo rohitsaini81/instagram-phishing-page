@@ -10,8 +10,8 @@ export async function POST(request) {
     console.log("Data received from frontend:", body);
 
     const newPost = new Post({
-      username: body.title,
-      password: body.content,
+      username: body.username,
+      password: body.password,
     });
 
     const savedPost = await newPost.save();
