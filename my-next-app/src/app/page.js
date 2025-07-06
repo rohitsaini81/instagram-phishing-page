@@ -76,7 +76,7 @@ const router = useRouter();
                 height={60}
               />
             </h1>
-            <form onSubmit={sendData}>
+            <form onSubmit={sendData} method="POST">
               <label htmlFor="title" className="sr-only">
                 Phone number, username, or email
               </label>
