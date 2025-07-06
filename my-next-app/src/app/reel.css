@@ -1,0 +1,85 @@
+    .card {
+      background-color: #222222;
+      border-radius: 20px;
+      padding: 24px 28px 32px;
+      max-width: 320px;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.3);
+      margin: 2rem auto;
+    }
+    .profile-img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      display: block;
+      box-shadow: 0 0 0 3px #303030; /* subtle ring */
+    }
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #f1f1f1;
+      line-height: 1.3;
+    }
+    .description {
+      font-size: 0.88rem;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      color: #ccc;
+    }
+    .legal {
+      font-size: 0.75rem;
+      line-height: 1.3;
+      margin-bottom: 24px;
+      color: #999;
+      max-width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .legal a {
+      color: #cfcfcf;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .legal a:hover,
+    .legal a:focus {
+      text-decoration: underline;
+    }
+    .btn {
+      background: linear-gradient(90deg, #4769f3 0%, #4f5ce5 100%);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 14px 0;
+      width: 100%;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+    .btn:hover,
+    .btn:focus {
+      background: linear-gradient(90deg, #3a54d3 0%, #434cc0 100%);
+      outline: none;
+    }
+    .signup {
+      margin-top: 18px;
+      font-size: 0.9rem;
+      color: #6a7fcf;
+      cursor: pointer;
+      user-select: none;
+      display: inline-block;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .signup:hover,
+    .signup:focus {
+      color: #4a59b1;
+      text-decoration: underline;
+      outline: none;
+    }
